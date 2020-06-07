@@ -81,7 +81,7 @@ WebDriver driver;
 	
 	List<WebElement> links=new ArrayList<WebElement>();
 	
-	links.add(animals);
+	//links.add(animals);
 	
 	
 	

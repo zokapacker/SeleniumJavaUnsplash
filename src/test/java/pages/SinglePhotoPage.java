@@ -1,12 +1,16 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.MoveToOffsetAction;
 import org.openqa.selenium.support.FindBy;
 
 public class SinglePhotoPage {
 	
 WebDriver driver;
+//Actions action = new Actions(driver);
 	
 	public SinglePhotoPage(WebDriver driver) {
 		
@@ -14,7 +18,7 @@ WebDriver driver;
 		//PageFactory.initElements(driver, this);
 		
 	}
-	@FindBy(xpath="//*[@id=\"app\"]/div/div[3]/div[2]/div[1]/div/div/div[1]/div[1]") 
+	@FindBy(xpath="//*[@id=\"app\"]/div/div[3]/div[2]/div[1]/div/div/div[2]/div[1]")
 	public WebElement randomPhoto;
 	@FindBy(xpath="/html/body/div[2]/div/div/div[4]/div/div/div[1]/div[1]/header/div[2]/div[1]/button") 
 	public WebElement likeButton;
@@ -34,7 +38,7 @@ WebDriver driver;
 	public WebElement largeSizePhoto;
 	@FindBy(linkText="Original Size]") 
 	public WebElement originalSizePhoto;
-	@FindBy(xpath="/html/body/div[2]/div/div/div[4]/div/div/div[1]/div[3]/div[1]/div/div/button") 
+	@FindBy(xpath="/html/body/div[2]/div/div/div[4]/div/div/div[1]/div[4]/div[1]/div/div/button") 
 	public WebElement readMoreButton;
 	@FindBy(xpath="/html/body/div[2]/div/div/div[4]/div/div/div[1]/div[3]/div[2]/button") 
 	public WebElement shareButton;
@@ -44,8 +48,16 @@ WebDriver driver;
 	public WebElement photoTitle;
 	@FindBy(xpath="/html/body/div[2]/div/div/div[4]/div/div/div[1]/div[1]/header/div[1]/span/div[2]/span/div/div/div[2]/div/div/button") 
 	public WebElement followLink;
+	@FindBy(xpath="/html/body/div[2]/div/div/div[4]/div/div/div[1]/div[1]/header/div[1]/span/div[2]/span/div/div/div[2]/div/a")
+	public WebElement smallProfileWindow;
 	@FindBy(xpath="/html/body/div[3]/div/div/div[2]/div/div[3]/div[1]/div/button")
 	public WebElement createNewCollectionButton;
+	@FindBy(xpath="/html/body/div[3]/div/div/div[1]/button")
+	public WebElement closeButton;
+	@FindBy(xpath="/html/body/div[3]/div/div/div[2]/div/div")
+	public WebElement shareWindow;
+	@FindBy(xpath="/html/body/div[3]/div/div/div[2]/div/div")
+	public WebElement infoWindow;
 	
 	public void clickLike() {
 		likeButton.click();
@@ -59,10 +71,21 @@ WebDriver driver;
 	public void clickDownloadPhotoButton() {
 		downloadPhotoButton.click();
 	}
-	
-	
-	
-	
+	public void clickCloseButton() {
+		closeButton.click();
+	}
+	public void clickShareButton() {
+		shareButton.click();
+	}
+	public void clickInfoButton() {
+		infoButton.click();
+	}
+	public void mouseOverPhotoTitle() {
+		Actions action = new Actions(driver);
+		action.moveToElement(photoTitle).perform();
+		
+		
+	}
 
 }
 
