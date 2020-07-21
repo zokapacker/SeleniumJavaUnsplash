@@ -43,6 +43,7 @@ public class OtherProfilePage {
 		@FindBy(xpath="/html/body/div[2]/div/div/div[4]/div/div/div[1]/div[1]/header/div[1]/span")
 		public WebElement randomUser;
 		
+		
 		/*public void clickRandomPhoto() {
 			randomPhoto.click();
 		}*/
@@ -51,6 +52,10 @@ public class OtherProfilePage {
 			randomUser.click();
 		}
 		public void clickFollow() {
+			followButton.click();
+		}
+		public void clickUnfollow() throws Exception {
+			Thread.sleep(2000);
 			followButton.click();
 		}
 		public void clickMessage() {

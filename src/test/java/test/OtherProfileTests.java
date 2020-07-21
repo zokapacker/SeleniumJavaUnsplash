@@ -11,6 +11,7 @@ import pages.BaseClass;
 import pages.LoginPage1;
 import pages.OtherProfilePage;
 import pages.SinglePhotoPage;
+import utils.Constants;
 
 public class OtherProfileTests extends BaseClass {
 	
@@ -51,36 +52,21 @@ public class OtherProfileTests extends BaseClass {
 		otherProfilePage.clickCloseButton();
 	}
 	@Test
-	public void tc07followButton() {
+	public void tc07followButton() throws Exception {
 		LoginPage1 loginPage1 = PageFactory.initElements(driver, LoginPage1.class); // pojednostaviti login
-		loginPage1.clickLogin();
-		loginPage1.loginToUnsplash("zokapacker@gmail.com", "sifra123");
+		loginPage1.loginToUnsplash(Constants.email, Constants.password);
 		
 		OtherProfilePage otherProfilePage = PageFactory.initElements(driver, OtherProfilePage.class);
 		otherProfilePage.clickRandomUser();
 		otherProfilePage.clickFollow();
-		/*if (otherProfilePage.followButton.getText().equals("Following"))
-	     System.out.println("Match found");
-	    else 
-	     System.out.println("Match Not found");*/
-		
 	    Assert.assertEquals(otherProfilePage.followButton.getText(), "Following");
-	    otherProfilePage.clickFollow();
+	    otherProfilePage.clickUnfollow();
 	}
 	@Test
 	public void tc08messageButton() {
-		
 		OtherProfilePage otherProfilePage = PageFactory.initElements(driver, OtherProfilePage.class);
 		otherProfilePage.clickMessage();
-		Assert.assertEquals(true, otherProfilePage.messageBox.isDisplayed());
-		//otherProfilePage.clickCloseButton();
-		 
+		Assert.assertEquals(true, otherProfilePage.messageBox.isDisplayed());	 
 	}
-	
-	
-	
-	
-	
-	
 
 }

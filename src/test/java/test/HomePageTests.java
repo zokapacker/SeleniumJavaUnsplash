@@ -3,6 +3,8 @@ package test;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -12,6 +14,7 @@ import org.testng.annotations.Test;
 import pages.BaseClass;
 import pages.HomePage;
 import pages.LoginPage1;
+import utils.Constants;
 
 public class HomePageTests extends BaseClass{
 	
@@ -19,154 +22,129 @@ public class HomePageTests extends BaseClass{
 	public void tc01logoutLoginLink() {
 		
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.login.isDisplayed());	
+		Assert.assertEquals(true, homePage.login.isDisplayed());
 	}
+	
 	@Test
 	public void tc02logoutJoinFreeLink() {
-		
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.joinFree.isDisplayed());
+		homePage.clickJoinFree();
+		Assert.assertEquals(driver.getCurrentUrl(), "https://unsplash.com/join");
 	}
+	
 	@Test
-	public void tc03logoutUpFilter() {
+	public void tc03logoutTopicsLink() {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.upFilter.isDisplayed());
-		//boolean isPresent = true; homePage.upFilter.isDisplayed(); //proslo i ovako
+		homePage.clickTopics();
+		Assert.assertEquals(driver.getCurrentUrl(), "https://unsplash.com/t");
 		}
+	
 	@Test
-	public void tc04logoutTopicsLink() {
+	public void tc04logoutExploreLink() {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.topics.isDisplayed());
+		homePage.clickExplore();
+		Assert.assertEquals(driver.getCurrentUrl(), "https://unsplash.com/explore");
 	}
 	@Test
-	public void tc05logoutExploreLink() {
+	public void tc05logoutDropDownMenu() {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.explore.isDisplayed());
+		homePage.clickDropDownMenu();
+		Assert.assertEquals(true, homePage.dropDownMenuWindow.isDisplayed());
 	}
 	@Test
-	public void tc06logoutDropDownMenu() {
+	public void tc06logoutSubmitAphotoButton() {  //dodati test koji proverava dodavanje slike
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.dropDownMenu.isDisplayed());
+		homePage.clickSubmitPhoto();
+		Assert.assertEquals(true, homePage.loginToSubmitPhoto.isDisplayed());
+		homePage.clickCloseLogin();
 	}
 	@Test
-	public void tc07logoutSubmitAphotoButton() {
+	public void tc07logoutEditorialLink() {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.buttonSubmitPhoto.isDisplayed());
+		Assert.assertEquals(true, homePage.editorial.isDisplayed()); //zato sto je to link ka home page
+	}
+	
+	@Test
+	public void tc08upFilter() throws Exception {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		homePage.upFilter.sendKeys(Constants.keysSunset);
+		homePage.upFilter.sendKeys(Keys.RETURN);
+		Assert.assertTrue(homePage.firstSearchResultTags.getText().contains(Constants.keysSunset));
+		System.out.println(homePage.firstSearchResultTags.getText());
 	}
 	@Test
-	public void tc08logoutEditorialLink() {
+	public void tc09upFilterNoKeys() {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.editorial.isDisplayed());
+		driver.get(Constants.baseURL);
+		homePage.upFilter.sendKeys(Constants.noKeys);
+		homePage.upFilter.sendKeys(Keys.RETURN);
+		Assert.assertEquals(homePage.upFilter.getAttribute("validationMessage"), "Please fill out this field.");
+	}
+	
+	@Test
+	public void tc10downFilter() {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		homePage.upFilter.sendKeys(Constants.keysBlack);
+		homePage.upFilter.sendKeys(Keys.RETURN);
+		Assert.assertTrue(homePage.firstSearchResultTags.getText().contains(Constants.keysBlack));
 	}
 	@Test
-	public void tc09logoutTravelLink() {
+	public void tc11downFilterNoKeys() {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.travel.isDisplayed());
+		driver.get(Constants.baseURL);
+		homePage.downFilter.sendKeys(Constants.noKeys);
+		homePage.downFilter.sendKeys(Keys.RETURN);
+		Assert.assertEquals(homePage.downFilter.getAttribute("validationMessage"), "Please fill out this field.");
+	}
+	@Test
+	public void tc12loginFollowingLink() {
+		LoginPage1 loginPage1 = PageFactory.initElements(driver, LoginPage1.class);
+		loginPage1.loginToUnsplash(Constants.email, Constants.password);
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		homePage.clickFollowing();
+		Assert.assertEquals(driver.getCurrentUrl(), "https://unsplash.com/following");
+		driver.navigate().back();
+	}
+	@Test
+	public void tc13loginProfileIcon() {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		homePage.clickProfileIcon();
+		Assert.assertEquals(true, homePage.personalMenuWindow.isDisplayed());
+	}
+	@Test
+	public void tc14loginNotifications() {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		homePage.clickNotifications();
+		Assert.assertEquals(true, homePage.notificationsWindow.isDisplayed());
+	}
+	@Test
+	public void tc15logoutLicenseLink() {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		homePage.clickLicense();
+		Assert.assertEquals(driver.getCurrentUrl(), "https://unsplash.com/license");
 	}
 	/*@Test
-	public void tc10logoutWorkFromHomeLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.workFromHome.isDisplayed());
-	}*/
-	@Test
-	public void tc11logoutCovid19Link() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.covid19.isDisplayed());
-	}
-	@Test
-	public void tc12logoutNatureLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.nature.isDisplayed());
-	}
-	@Test
-	public void tc13logoutWallpapersLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.wallpapers.isDisplayed());
-	}
-	@Test
-	public void tc14logoutTexturesAndPatternsLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.texturesAndPatterns.isDisplayed());
-	}
-	@Test
-	public void tc15logoutPeopleLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.people.isDisplayed());
-	}
-	@Test
-	public void tc16logoutBusinessAndWorkLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.businessAndWork.isDisplayed());
-	}
-	@Test
-	public void tc17logoutTechnologyLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.technology.isDisplayed());
-	}
-	@Test
-	public void tc18logoutAnimalsLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.animals.isDisplayed());
-	}
-	@Test
-	public void tc19logoutInteriorsLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.interiors.isDisplayed());
-	}
-	@Test
-	public void tc20logoutViewAllLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.viewAll.isDisplayed());
-	}
-	@Test
-	public void tc21logoutFreelyUsableImagesLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.freelyUsableImages.isDisplayed());
-	}
-	@Test
-	public void tc22logoutDownFilter() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.downFilter.isDisplayed());
-	}
-	@Test
-	public void tc23pagination() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.pagination.isDisplayed());
-	}
-	@Test
-	public void tc24loginHomeLink() {
-		
+	public void tc15loginSubmitAphotoButtonUpload() throws Exception {
 		LoginPage1 loginPage1 = PageFactory.initElements(driver, LoginPage1.class);
-		loginPage1.clickLogin();
-		loginPage1.loginToUnsplash("zokapacker@gmail.com", "sifra123");
-		
+		loginPage1.loginToUnsplash(Constants.email, Constants.password);
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.home.isDisplayed());
+		homePage.uploadPhotoOver5mp();
+		homePage.clickViewProfile();
+		Boolean ImagePresent = (Boolean) ((JavascriptExecutor)driver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", homePage.firstPhoto);
+        if (!ImagePresent)
+        {
+             System.out.println("Image not displayed.");
+        }
+        else
+        {
+            System.out.println("Image displayed.");
+        }
+        homePage.deletePhoto();
 	}
 	@Test
-	public void tc25loginNotifications() {
+	public void tc16loginSubmitAphotoButtonUploadUnder5mp() throws Exception {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.notifications.isDisplayed());
-	}
-	@Test
-	public void tc26loginProfileIconButton() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.profileIcon.isDisplayed());
-	}
-	@Test
-	public void tc27loginFollowingLink() {
-		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-		Assert.assertEquals(true, homePage.following.isDisplayed());
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
+		homePage.uploadPhotoUnder5mp();
+		Assert.assertEquals(homePage.pleaseUploadOver5mp.getText(), "Please upload images over 5MP");
+	}*/
 }

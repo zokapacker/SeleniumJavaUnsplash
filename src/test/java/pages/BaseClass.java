@@ -24,7 +24,7 @@ import utils.BrowserFactory1;
 public class BaseClass {
 	
 	public WebDriver driver;
-	//public File folder;
+	File folder;
 	
 	//@SuppressWarnings("deprecation")
 	@BeforeClass
