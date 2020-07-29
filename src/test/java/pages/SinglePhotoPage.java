@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.MoveToOffsetAction;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.FindBy;
 
 public class SinglePhotoPage {
@@ -102,7 +103,9 @@ WebDriver driver;
 		Actions action = new Actions(driver);
 		action.moveToElement(photoTitle).perform();	
 	}
+	
 
+	
 
 }	
 		

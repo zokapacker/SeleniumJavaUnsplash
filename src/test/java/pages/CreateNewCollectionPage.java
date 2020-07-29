@@ -77,7 +77,7 @@ public class CreateNewCollectionPage {
 		
 		public void createInfo(String nameField, String descriptionField) throws Exception {
 			Thread.sleep(4000);
-			driver.get(Constants.baseURL);
+			//driver.get(Constants.baseURL);
 			randomPhoto.click();
 			addToCollectionButton.click();
 			createNewCollectionButton.click();
@@ -88,7 +88,7 @@ public class CreateNewCollectionPage {
 		}
 		public void createInfoWithoutPrivacy(String nameField, String descriptionField) throws Exception {
 			Thread.sleep(4000);
-			driver.get(Constants.baseURL);
+			//driver.get(Constants.baseURL);
 			randomPhoto.click();
 			addToCollectionButton.click();
 			createNewCollectionButton.click();

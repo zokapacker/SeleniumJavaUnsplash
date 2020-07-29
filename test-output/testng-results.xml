@@ -1,53 +1,355 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="102" total="130" passed="28" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-07-21T18:27:47 CEST" name="Default suite" finished-at="2020-07-21T18:29:04 CEST" duration-ms="77326">
+  <suite started-at="2020-07-29T10:22:24 CEST" name="Suite" finished-at="2020-07-29T10:28:23 CEST" duration-ms="359122">
     <groups>
+      <group name="func">
+        <method signature="CreateNewCollectionTests.tc01createCollection()[pri:0, instance:test.CreateNewCollectionTests@3eb7fc54]" name="tc01createCollection" class="test.CreateNewCollectionTests"/>
+        <method signature="HomePageTests.tc02logoutJoinFreeLink()[pri:0, instance:test.HomePageTests@363ee3a2]" name="tc02logoutJoinFreeLink" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc06logoutSubmitAphotoButton()[pri:0, instance:test.HomePageTests@363ee3a2]" name="tc06logoutSubmitAphotoButton" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc08upFilter()[pri:0, instance:test.HomePageTests@363ee3a2]" name="tc08upFilter" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc10downFilter()[pri:0, instance:test.HomePageTests@363ee3a2]" name="tc10downFilter" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc15logoutLicenseLink()[pri:0, instance:test.HomePageTests@363ee3a2]" name="tc15logoutLicenseLink" class="test.HomePageTests"/>
+        <method signature="LoginTests.tc01loginApp()[pri:0, instance:test.LoginTests@4386f16]" name="tc01loginApp" class="test.LoginTests"/>
+        <method signature="OtherProfileTests.tc05followLinkLogout()[pri:0, instance:test.OtherProfileTests@4690b489]" name="tc05followLinkLogout" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc06messageLogout()[pri:0, instance:test.OtherProfileTests@4690b489]" name="tc06messageLogout" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc07followButton()[pri:0, instance:test.OtherProfileTests@4690b489]" name="tc07followButton" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc08messageButton()[pri:0, instance:test.OtherProfileTests@4690b489]" name="tc08messageButton" class="test.OtherProfileTests"/>
+        <method signature="SinglePhotoTests.tc01downloadPhotoButton()[pri:0, instance:test.SinglePhotoTests@79b06cab]" name="tc01downloadPhotoButton" class="test.SinglePhotoTests"/>
+        <method signature="SinglePhotoTests.tc02LikeButton()[pri:0, instance:test.SinglePhotoTests@79b06cab]" name="tc02LikeButton" class="test.SinglePhotoTests"/>
+        <method signature="SinglePhotoTests.tc03addToCollectionButton()[pri:0, instance:test.SinglePhotoTests@79b06cab]" name="tc03addToCollectionButton" class="test.SinglePhotoTests"/>
+        <method signature="CreateNewCollectionTests.tc01createCollection()[pri:0, instance:test.CreateNewCollectionTests@2e4b8173]" name="tc01createCollection" class="test.CreateNewCollectionTests"/>
+        <method signature="HomePageTests.tc02logoutJoinFreeLink()[pri:0, instance:test.HomePageTests@3e92efc3]" name="tc02logoutJoinFreeLink" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc06logoutSubmitAphotoButton()[pri:0, instance:test.HomePageTests@3e92efc3]" name="tc06logoutSubmitAphotoButton" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc08upFilter()[pri:0, instance:test.HomePageTests@3e92efc3]" name="tc08upFilter" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc10downFilter()[pri:0, instance:test.HomePageTests@3e92efc3]" name="tc10downFilter" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc15logoutLicenseLink()[pri:0, instance:test.HomePageTests@3e92efc3]" name="tc15logoutLicenseLink" class="test.HomePageTests"/>
+        <method signature="LoginTests.tc01loginApp()[pri:0, instance:test.LoginTests@703580bf]" name="tc01loginApp" class="test.LoginTests"/>
+        <method signature="OtherProfileTests.tc05followLinkLogout()[pri:0, instance:test.OtherProfileTests@1622f1b]" name="tc05followLinkLogout" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc06messageLogout()[pri:0, instance:test.OtherProfileTests@1622f1b]" name="tc06messageLogout" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc07followButton()[pri:0, instance:test.OtherProfileTests@1622f1b]" name="tc07followButton" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc08messageButton()[pri:0, instance:test.OtherProfileTests@1622f1b]" name="tc08messageButton" class="test.OtherProfileTests"/>
+        <method signature="SinglePhotoTests.tc01downloadPhotoButton()[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" name="tc01downloadPhotoButton" class="test.SinglePhotoTests"/>
+        <method signature="SinglePhotoTests.tc02LikeButton()[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" name="tc02LikeButton" class="test.SinglePhotoTests"/>
+        <method signature="SinglePhotoTests.tc03addToCollectionButton()[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" name="tc03addToCollectionButton" class="test.SinglePhotoTests"/>
+      </group> <!-- func -->
+      <group name="smoke">
+        <method signature="CreateNewCollectionTests.tc01createCollection()[pri:0, instance:test.CreateNewCollectionTests@3eb7fc54]" name="tc01createCollection" class="test.CreateNewCollectionTests"/>
+        <method signature="HomePageTests.tc02logoutJoinFreeLink()[pri:0, instance:test.HomePageTests@363ee3a2]" name="tc02logoutJoinFreeLink" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc06logoutSubmitAphotoButton()[pri:0, instance:test.HomePageTests@363ee3a2]" name="tc06logoutSubmitAphotoButton" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc08upFilter()[pri:0, instance:test.HomePageTests@363ee3a2]" name="tc08upFilter" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc10downFilter()[pri:0, instance:test.HomePageTests@363ee3a2]" name="tc10downFilter" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc15logoutLicenseLink()[pri:0, instance:test.HomePageTests@363ee3a2]" name="tc15logoutLicenseLink" class="test.HomePageTests"/>
+        <method signature="LoginTests.tc01loginApp()[pri:0, instance:test.LoginTests@4386f16]" name="tc01loginApp" class="test.LoginTests"/>
+        <method signature="OtherProfileTests.tc05followLinkLogout()[pri:0, instance:test.OtherProfileTests@4690b489]" name="tc05followLinkLogout" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc06messageLogout()[pri:0, instance:test.OtherProfileTests@4690b489]" name="tc06messageLogout" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc07followButton()[pri:0, instance:test.OtherProfileTests@4690b489]" name="tc07followButton" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc08messageButton()[pri:0, instance:test.OtherProfileTests@4690b489]" name="tc08messageButton" class="test.OtherProfileTests"/>
+        <method signature="SinglePhotoTests.tc01downloadPhotoButton()[pri:0, instance:test.SinglePhotoTests@79b06cab]" name="tc01downloadPhotoButton" class="test.SinglePhotoTests"/>
+        <method signature="SinglePhotoTests.tc02LikeButton()[pri:0, instance:test.SinglePhotoTests@79b06cab]" name="tc02LikeButton" class="test.SinglePhotoTests"/>
+        <method signature="SinglePhotoTests.tc03addToCollectionButton()[pri:0, instance:test.SinglePhotoTests@79b06cab]" name="tc03addToCollectionButton" class="test.SinglePhotoTests"/>
+        <method signature="CreateNewCollectionTests.tc01createCollection()[pri:0, instance:test.CreateNewCollectionTests@2e4b8173]" name="tc01createCollection" class="test.CreateNewCollectionTests"/>
+        <method signature="HomePageTests.tc02logoutJoinFreeLink()[pri:0, instance:test.HomePageTests@3e92efc3]" name="tc02logoutJoinFreeLink" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc06logoutSubmitAphotoButton()[pri:0, instance:test.HomePageTests@3e92efc3]" name="tc06logoutSubmitAphotoButton" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc08upFilter()[pri:0, instance:test.HomePageTests@3e92efc3]" name="tc08upFilter" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc10downFilter()[pri:0, instance:test.HomePageTests@3e92efc3]" name="tc10downFilter" class="test.HomePageTests"/>
+        <method signature="HomePageTests.tc15logoutLicenseLink()[pri:0, instance:test.HomePageTests@3e92efc3]" name="tc15logoutLicenseLink" class="test.HomePageTests"/>
+        <method signature="LoginTests.tc01loginApp()[pri:0, instance:test.LoginTests@703580bf]" name="tc01loginApp" class="test.LoginTests"/>
+        <method signature="OtherProfileTests.tc05followLinkLogout()[pri:0, instance:test.OtherProfileTests@1622f1b]" name="tc05followLinkLogout" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc06messageLogout()[pri:0, instance:test.OtherProfileTests@1622f1b]" name="tc06messageLogout" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc07followButton()[pri:0, instance:test.OtherProfileTests@1622f1b]" name="tc07followButton" class="test.OtherProfileTests"/>
+        <method signature="OtherProfileTests.tc08messageButton()[pri:0, instance:test.OtherProfileTests@1622f1b]" name="tc08messageButton" class="test.OtherProfileTests"/>
+        <method signature="SinglePhotoTests.tc01downloadPhotoButton()[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" name="tc01downloadPhotoButton" class="test.SinglePhotoTests"/>
+        <method signature="SinglePhotoTests.tc02LikeButton()[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" name="tc02LikeButton" class="test.SinglePhotoTests"/>
+        <method signature="SinglePhotoTests.tc03addToCollectionButton()[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" name="tc03addToCollectionButton" class="test.SinglePhotoTests"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2020-07-21T18:27:47 CEST" name="Default test" finished-at="2020-07-21T18:29:04 CEST" duration-ms="77326">
+    <test started-at="2020-07-29T10:22:24 CEST" name="TestsOnChrome" finished-at="2020-07-29T10:25:13 CEST" duration-ms="169274">
       <class name="test.LoginTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTests@29176cc1]" started-at="2020-07-21T18:27:47 CEST" name="setup" finished-at="2020-07-21T18:27:56 CEST" duration-ms="9724" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.LoginTests@4386f16]" started-at="2020-07-29T10:22:24 CEST" name="setup" finished-at="2020-07-29T10:22:36 CEST" duration-ms="11886" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="tc01loginApp()[pri:0, instance:test.LoginTests@29176cc1]" started-at="2020-07-21T18:27:57 CEST" name="tc01loginApp" finished-at="2020-07-21T18:28:09 CEST" duration-ms="12128" status="PASS">
+        <test-method signature="tc01loginApp()[pri:0, instance:test.LoginTests@4386f16]" started-at="2020-07-29T10:22:36 CEST" name="tc01loginApp" finished-at="2020-07-29T10:22:49 CEST" duration-ms="13135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc01loginApp -->
-        <test-method signature="tc02noCredential()[pri:0, instance:test.LoginTests@29176cc1]" started-at="2020-07-21T18:28:09 CEST" name="tc02noCredential" finished-at="2020-07-21T18:28:15 CEST" duration-ms="6574" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc02noCredential -->
-        <test-method signature="tc03noEmail()[pri:0, instance:test.LoginTests@29176cc1]" started-at="2020-07-21T18:28:15 CEST" name="tc03noEmail" finished-at="2020-07-21T18:28:21 CEST" duration-ms="5770" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc03noEmail -->
-        <test-method signature="tc04wrongEmail()[pri:0, instance:test.LoginTests@29176cc1]" started-at="2020-07-21T18:28:21 CEST" name="tc04wrongEmail" finished-at="2020-07-21T18:28:27 CEST" duration-ms="5582" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc04wrongEmail -->
-        <test-method signature="tc05noPassword()[pri:0, instance:test.LoginTests@29176cc1]" started-at="2020-07-21T18:28:27 CEST" name="tc05noPassword" finished-at="2020-07-21T18:28:33 CEST" duration-ms="6388" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc05noPassword -->
-        <test-method signature="tc06wrongPassword()[pri:0, instance:test.LoginTests@29176cc1]" started-at="2020-07-21T18:28:33 CEST" name="tc06wrongPassword" finished-at="2020-07-21T18:28:40 CEST" duration-ms="6534" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc06wrongPassword -->
-        <test-method signature="tc07forgotPasswordLink()[pri:0, instance:test.LoginTests@29176cc1]" started-at="2020-07-21T18:28:40 CEST" name="tc07forgotPasswordLink" finished-at="2020-07-21T18:28:40 CEST" duration-ms="918" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc07forgotPasswordLink -->
-        <test-method signature="tc08joinLink()[pri:0, instance:test.LoginTests@29176cc1]" started-at="2020-07-21T18:28:40 CEST" name="tc08joinLink" finished-at="2020-07-21T18:29:00 CEST" duration-ms="19839" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc08joinLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LoginTests@29176cc1]" started-at="2020-07-21T18:29:00 CEST" name="tearDown" finished-at="2020-07-21T18:29:04 CEST" duration-ms="3780" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LoginTests@4386f16]" started-at="2020-07-29T10:22:49 CEST" name="tearDown" finished-at="2020-07-29T10:22:53 CEST" duration-ms="3788" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- test.LoginTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="test.OtherProfileTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.OtherProfileTests@4690b489]" started-at="2020-07-29T10:22:53 CEST" name="setup" finished-at="2020-07-29T10:23:03 CEST" duration-ms="10079" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc05followLinkLogout()[pri:0, instance:test.OtherProfileTests@4690b489]" started-at="2020-07-29T10:23:03 CEST" name="tc05followLinkLogout" finished-at="2020-07-29T10:23:06 CEST" duration-ms="2580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc05followLinkLogout -->
+        <test-method signature="tc06messageLogout()[pri:0, instance:test.OtherProfileTests@4690b489]" started-at="2020-07-29T10:23:06 CEST" name="tc06messageLogout" finished-at="2020-07-29T10:23:06 CEST" duration-ms="648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc06messageLogout -->
+        <test-method signature="tc07followButton()[pri:0, instance:test.OtherProfileTests@4690b489]" started-at="2020-07-29T10:23:06 CEST" name="tc07followButton" finished-at="2020-07-29T10:23:21 CEST" duration-ms="14746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc07followButton -->
+        <test-method signature="tc08messageButton()[pri:0, instance:test.OtherProfileTests@4690b489]" started-at="2020-07-29T10:23:21 CEST" name="tc08messageButton" finished-at="2020-07-29T10:23:23 CEST" duration-ms="1406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc08messageButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.OtherProfileTests@4690b489]" started-at="2020-07-29T10:23:23 CEST" name="tearDown" finished-at="2020-07-29T10:23:26 CEST" duration-ms="3752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.OtherProfileTests -->
+      <class name="test.HomePageTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.HomePageTests@363ee3a2]" started-at="2020-07-29T10:24:04 CEST" name="setup" finished-at="2020-07-29T10:24:15 CEST" duration-ms="10682" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc02logoutJoinFreeLink()[pri:0, instance:test.HomePageTests@363ee3a2]" started-at="2020-07-29T10:24:15 CEST" name="tc02logoutJoinFreeLink" finished-at="2020-07-29T10:24:18 CEST" duration-ms="3262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc02logoutJoinFreeLink -->
+        <test-method signature="tc06logoutSubmitAphotoButton()[pri:0, instance:test.HomePageTests@363ee3a2]" started-at="2020-07-29T10:24:18 CEST" name="tc06logoutSubmitAphotoButton" finished-at="2020-07-29T10:24:21 CEST" duration-ms="3350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc06logoutSubmitAphotoButton -->
+        <test-method signature="tc08upFilter()[pri:0, instance:test.HomePageTests@363ee3a2]" started-at="2020-07-29T10:24:21 CEST" name="tc08upFilter" finished-at="2020-07-29T10:24:23 CEST" duration-ms="2194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc08upFilter -->
+        <test-method signature="tc10downFilter()[pri:0, instance:test.HomePageTests@363ee3a2]" started-at="2020-07-29T10:24:23 CEST" name="tc10downFilter" finished-at="2020-07-29T10:24:28 CEST" duration-ms="4945" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc10downFilter -->
+        <test-method signature="tc15logoutLicenseLink()[pri:0, instance:test.HomePageTests@363ee3a2]" started-at="2020-07-29T10:24:28 CEST" name="tc15logoutLicenseLink" finished-at="2020-07-29T10:24:32 CEST" duration-ms="3401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc15logoutLicenseLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.HomePageTests@363ee3a2]" started-at="2020-07-29T10:24:32 CEST" name="tearDown" finished-at="2020-07-29T10:24:36 CEST" duration-ms="3784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.HomePageTests -->
+      <class name="test.CreateNewCollectionTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.CreateNewCollectionTests@3eb7fc54]" started-at="2020-07-29T10:24:36 CEST" name="setup" finished-at="2020-07-29T10:24:46 CEST" duration-ms="10281" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc01createCollection()[pri:0, instance:test.CreateNewCollectionTests@3eb7fc54]" started-at="2020-07-29T10:24:46 CEST" name="tc01createCollection" finished-at="2020-07-29T10:25:10 CEST" duration-ms="23749" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc01createCollection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CreateNewCollectionTests@3eb7fc54]" started-at="2020-07-29T10:25:10 CEST" name="tearDown" finished-at="2020-07-29T10:25:13 CEST" duration-ms="3772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.CreateNewCollectionTests -->
+      <class name="test.SinglePhotoTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.SinglePhotoTests@79b06cab]" started-at="2020-07-29T10:23:26 CEST" name="setup" finished-at="2020-07-29T10:23:37 CEST" duration-ms="10595" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc01downloadPhotoButton()[pri:0, instance:test.SinglePhotoTests@79b06cab]" started-at="2020-07-29T10:23:37 CEST" name="tc01downloadPhotoButton" finished-at="2020-07-29T10:23:56 CEST" duration-ms="19243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc01downloadPhotoButton -->
+        <test-method signature="tc02LikeButton()[pri:0, instance:test.SinglePhotoTests@79b06cab]" started-at="2020-07-29T10:23:56 CEST" name="tc02LikeButton" finished-at="2020-07-29T10:23:57 CEST" duration-ms="552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc02LikeButton -->
+        <test-method signature="tc03addToCollectionButton()[pri:0, instance:test.SinglePhotoTests@79b06cab]" started-at="2020-07-29T10:23:57 CEST" name="tc03addToCollectionButton" finished-at="2020-07-29T10:24:00 CEST" duration-ms="3455" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc03addToCollectionButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.SinglePhotoTests@79b06cab]" started-at="2020-07-29T10:24:00 CEST" name="tearDown" finished-at="2020-07-29T10:24:04 CEST" duration-ms="3806" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.SinglePhotoTests -->
+    </test> <!-- TestsOnChrome -->
+    <test started-at="2020-07-29T10:25:14 CEST" name="TestsOnFirefox" finished-at="2020-07-29T10:28:23 CEST" duration-ms="189687">
+      <class name="test.LoginTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.LoginTests@703580bf]" started-at="2020-07-29T10:25:14 CEST" name="setup" finished-at="2020-07-29T10:25:25 CEST" duration-ms="11531" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc01loginApp()[pri:0, instance:test.LoginTests@703580bf]" started-at="2020-07-29T10:25:25 CEST" name="tc01loginApp" finished-at="2020-07-29T10:25:42 CEST" duration-ms="17388" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc01loginApp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.LoginTests@703580bf]" started-at="2020-07-29T10:25:43 CEST" name="tearDown" finished-at="2020-07-29T10:25:48 CEST" duration-ms="5631" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.LoginTests -->
+      <class name="test.OtherProfileTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.OtherProfileTests@1622f1b]" started-at="2020-07-29T10:25:48 CEST" name="setup" finished-at="2020-07-29T10:26:02 CEST" duration-ms="14276" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc05followLinkLogout()[pri:0, instance:test.OtherProfileTests@1622f1b]" started-at="2020-07-29T10:26:02 CEST" name="tc05followLinkLogout" finished-at="2020-07-29T10:26:05 CEST" duration-ms="2666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc05followLinkLogout -->
+        <test-method signature="tc06messageLogout()[pri:0, instance:test.OtherProfileTests@1622f1b]" started-at="2020-07-29T10:26:05 CEST" name="tc06messageLogout" finished-at="2020-07-29T10:26:06 CEST" duration-ms="736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc06messageLogout -->
+        <test-method signature="tc07followButton()[pri:0, instance:test.OtherProfileTests@1622f1b]" started-at="2020-07-29T10:26:06 CEST" name="tc07followButton" finished-at="2020-07-29T10:26:27 CEST" duration-ms="21377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc07followButton -->
+        <test-method signature="tc08messageButton()[pri:0, instance:test.OtherProfileTests@1622f1b]" started-at="2020-07-29T10:26:27 CEST" name="tc08messageButton" finished-at="2020-07-29T10:26:28 CEST" duration-ms="549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc08messageButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.OtherProfileTests@1622f1b]" started-at="2020-07-29T10:26:28 CEST" name="tearDown" finished-at="2020-07-29T10:26:33 CEST" duration-ms="4960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.OtherProfileTests -->
+      <class name="test.HomePageTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.HomePageTests@3e92efc3]" started-at="2020-07-29T10:27:10 CEST" name="setup" finished-at="2020-07-29T10:27:20 CEST" duration-ms="10352" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc02logoutJoinFreeLink()[pri:0, instance:test.HomePageTests@3e92efc3]" started-at="2020-07-29T10:27:20 CEST" name="tc02logoutJoinFreeLink" finished-at="2020-07-29T10:27:24 CEST" duration-ms="3624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc02logoutJoinFreeLink -->
+        <test-method signature="tc06logoutSubmitAphotoButton()[pri:0, instance:test.HomePageTests@3e92efc3]" started-at="2020-07-29T10:27:24 CEST" name="tc06logoutSubmitAphotoButton" finished-at="2020-07-29T10:27:27 CEST" duration-ms="3577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc06logoutSubmitAphotoButton -->
+        <test-method signature="tc08upFilter()[pri:0, instance:test.HomePageTests@3e92efc3]" started-at="2020-07-29T10:27:27 CEST" name="tc08upFilter" finished-at="2020-07-29T10:27:30 CEST" duration-ms="2331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc08upFilter -->
+        <test-method signature="tc10downFilter()[pri:0, instance:test.HomePageTests@3e92efc3]" started-at="2020-07-29T10:27:30 CEST" name="tc10downFilter" finished-at="2020-07-29T10:27:34 CEST" duration-ms="4374" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc10downFilter -->
+        <test-method signature="tc15logoutLicenseLink()[pri:0, instance:test.HomePageTests@3e92efc3]" started-at="2020-07-29T10:27:34 CEST" name="tc15logoutLicenseLink" finished-at="2020-07-29T10:27:37 CEST" duration-ms="3300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc15logoutLicenseLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.HomePageTests@3e92efc3]" started-at="2020-07-29T10:27:37 CEST" name="tearDown" finished-at="2020-07-29T10:27:42 CEST" duration-ms="5035" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.HomePageTests -->
+      <class name="test.CreateNewCollectionTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.CreateNewCollectionTests@2e4b8173]" started-at="2020-07-29T10:27:42 CEST" name="setup" finished-at="2020-07-29T10:27:53 CEST" duration-ms="10216" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc01createCollection()[pri:0, instance:test.CreateNewCollectionTests@2e4b8173]" started-at="2020-07-29T10:27:53 CEST" name="tc01createCollection" finished-at="2020-07-29T10:28:18 CEST" duration-ms="25722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc01createCollection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CreateNewCollectionTests@2e4b8173]" started-at="2020-07-29T10:28:18 CEST" name="tearDown" finished-at="2020-07-29T10:28:23 CEST" duration-ms="4996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.CreateNewCollectionTests -->
+      <class name="test.SinglePhotoTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" started-at="2020-07-29T10:26:33 CEST" name="setup" finished-at="2020-07-29T10:26:43 CEST" duration-ms="10504" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc01downloadPhotoButton()[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" started-at="2020-07-29T10:26:43 CEST" name="tc01downloadPhotoButton" finished-at="2020-07-29T10:27:01 CEST" duration-ms="17693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc01downloadPhotoButton -->
+        <test-method signature="tc02LikeButton()[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" started-at="2020-07-29T10:27:01 CEST" name="tc02LikeButton" finished-at="2020-07-29T10:27:01 CEST" duration-ms="531" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc02LikeButton -->
+        <test-method signature="tc03addToCollectionButton()[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" started-at="2020-07-29T10:27:01 CEST" name="tc03addToCollectionButton" finished-at="2020-07-29T10:27:05 CEST" duration-ms="3360" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc03addToCollectionButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.SinglePhotoTests@72a7c7e0]" started-at="2020-07-29T10:27:05 CEST" name="tearDown" finished-at="2020-07-29T10:27:10 CEST" duration-ms="4917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.SinglePhotoTests -->
+    </test> <!-- TestsOnFirefox -->
+  </suite> <!-- Suite -->
 </testng-results>

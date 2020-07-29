@@ -18,7 +18,7 @@ import utils.Constants;
 public class CreateNewCollectionTests extends BaseClass {
 
 
-	@Test
+	@Test(groups = {"smoke", "func"})
 	public void tc01createCollection() throws Exception {
 	LoginPage1 loginPage1 = PageFactory.initElements(driver, LoginPage1.class);
 	loginPage1.loginToUnsplash(Constants.email, Constants.password);
@@ -26,9 +26,11 @@ public class CreateNewCollectionTests extends BaseClass {
 	createNewCollectionPage.createInfo(Constants.name, Constants.descr);
 	createNewCollectionPage.viewMyCollections();
 	Assert.assertEquals(createNewCollectionPage.firstCollection.getText(), Constants.name);
+	createNewCollectionPage.firstCollection.click();
+	createNewCollectionPage.deleteCollection();
 	}
 	
-	@Test
+	@Test(groups = {"func"})
 	public void tc02createCollectionPrivacySymbol() throws Exception {
 		CreateNewCollectionPage createNewCollectionPage = PageFactory.initElements(driver, CreateNewCollectionPage.class);
 		createNewCollectionPage.firstCollection.click();
@@ -41,14 +43,14 @@ public class CreateNewCollectionTests extends BaseClass {
 	    }
 	}
 	
-	@Test
+	@Test(groups = {"func"})
 	public void tc03createCollectionDescription() throws Exception {
 		CreateNewCollectionPage createNewCollectionPage = PageFactory.initElements(driver, CreateNewCollectionPage.class);
 		Assert.assertEquals(createNewCollectionPage.descrCheck.getText(), Constants.descr);
         createNewCollectionPage.deleteCollection();
 	}
 
-	@Test
+	@Test(groups = {"func"})
 	public void tc04createCollectionNoPrivacySymbol() throws Exception {
 	    CreateNewCollectionPage createNewCollectionPage = PageFactory.initElements(driver, CreateNewCollectionPage.class);
 	    createNewCollectionPage.createInfoWithoutPrivacy(Constants.name, Constants.descr);
@@ -63,7 +65,7 @@ public class CreateNewCollectionTests extends BaseClass {
 	    createNewCollectionPage.deleteCollection();
 	}
 
-	@Test
+	@Test(groups = {"func"})
 	public void tc05createCollectionNoName() throws Exception {
 	    CreateNewCollectionPage createNewCollectionPage = PageFactory.initElements(driver, CreateNewCollectionPage.class);
 	    createNewCollectionPage.createInfo("", "opis");
@@ -87,7 +89,7 @@ public class CreateNewCollectionTests extends BaseClass {
 	    createNewCollectionPage.deleteCollection();
 	}
 	
-	@Test
+	@Test(groups = {"func"})
 	public void tc08CancelButton() throws Exception {
 		CreateNewCollectionPage createNewCollectionPage = PageFactory.initElements(driver, CreateNewCollectionPage.class);
 		createNewCollectionPage.clickCancel();

@@ -35,23 +35,24 @@ public class OtherProfileTests extends BaseClass {
 	@Test
 	public void tc04collections() {
 		OtherProfilePage otherProfilePage = PageFactory.initElements(driver, OtherProfilePage.class);
-		Assert.assertEquals(true, otherProfilePage.collections.isDisplayed());	
+		Assert.assertEquals(true, otherProfilePage.collections.isDisplayed());
 	}
-	@Test
+	@Test(groups = {"smoke", "func"})
 	public void tc05followLinkLogout() {
 		OtherProfilePage otherProfilePage = PageFactory.initElements(driver, OtherProfilePage.class);
+		otherProfilePage.clickRandomUser();
 		otherProfilePage.clickFollow();
 		Assert.assertEquals(true, otherProfilePage.loginBox.isDisplayed());
 		otherProfilePage.clickCloseButton();
 	}
-	@Test
+	@Test(groups = {"smoke", "func"})
 	public void tc06messageLogout() {
 		OtherProfilePage otherProfilePage = PageFactory.initElements(driver, OtherProfilePage.class);
 		otherProfilePage.clickMessage();
 		Assert.assertEquals(true, otherProfilePage.loginBox.isDisplayed());
 		otherProfilePage.clickCloseButton();
 	}
-	@Test
+	@Test(groups = {"smoke", "func"})
 	public void tc07followButton() throws Exception {
 		LoginPage1 loginPage1 = PageFactory.initElements(driver, LoginPage1.class); // pojednostaviti login
 		loginPage1.loginToUnsplash(Constants.email, Constants.password);
@@ -62,7 +63,7 @@ public class OtherProfileTests extends BaseClass {
 	    Assert.assertEquals(otherProfilePage.followButton.getText(), "Following");
 	    otherProfilePage.clickUnfollow();
 	}
-	@Test
+	@Test(groups = {"smoke", "func"})
 	public void tc08messageButton() {
 		OtherProfilePage otherProfilePage = PageFactory.initElements(driver, OtherProfilePage.class);
 		otherProfilePage.clickMessage();

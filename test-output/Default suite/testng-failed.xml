@@ -5,8 +5,15 @@
     <classes>
       <class name="test.LoginTests">
         <methods>
+          <include name="tc05noPassword"/>
           <include name="tearDown"/>
+          <include name="tc03noEmail"/>
+          <include name="tc01loginApp"/>
           <include name="setup"/>
+          <include name="tc08joinLink"/>
+          <include name="tc07forgotPasswordLink"/>
+          <include name="tc06wrongPassword"/>
+          <include name="tc02noCredential"/>
           <include name="tc04wrongEmail"/>
         </methods>
       </class> <!-- test.LoginTests -->

@@ -13,7 +13,7 @@ import pages.LoginPage1;
 import utils.Constants;
 
 public class EditProfileTests extends BaseClass {
-	@Test
+	@Test(groups = {"func"})
 	public void tc01emailSettingsLink() throws Exception {
 		LoginPage1 loginPage1 = PageFactory.initElements(driver, LoginPage1.class);
 		loginPage1.loginToUnsplash(Constants.email, Constants.password);
@@ -23,32 +23,32 @@ public class EditProfileTests extends BaseClass {
 		editProfilePage.clickEmailSettings();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://unsplash.com/account/email_settings");
 	}
-	@Test
+	@Test(groups = {"func"})
 	public void tc02changePasswordLink() {
 		EditProfilePage editProfilePage = PageFactory.initElements(driver, EditProfilePage.class);
 		editProfilePage.clickChangePassword();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://unsplash.com/account/password");
 	}
-	@Test
+	@Test(groups = {"func"})
 	public void tc03connectAccountsLink() throws Exception {
 		EditProfilePage editProfilePage = PageFactory.initElements(driver, EditProfilePage.class);
 		editProfilePage.clickConnectAccounts();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://unsplash.com/account/connect");
 	}
-	@Test
+	@Test(groups = {"func"})
 	public void tc04applicationsLink() {
 		EditProfilePage editProfilePage = PageFactory.initElements(driver, EditProfilePage.class);
 		editProfilePage.clickApplications();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://unsplash.com/oauth/authorized_applications");
 	}
-	@Test
+	@Test(groups = {"func"})
 	public void tc05closeAccountLink() {
 		EditProfilePage editProfilePage = PageFactory.initElements(driver, EditProfilePage.class);
 		editProfilePage.clickCloseAccount();
 		Assert.assertEquals(driver.getCurrentUrl(), "https://unsplash.com/account/close");
 		editProfilePage.clickEditProfileButton();
 	}
-	@Test
+	@Test(groups = {"func"})
 	public void tc06changeProfileImage() throws Exception {
 		EditProfilePage editProfilePage = PageFactory.initElements(driver, EditProfilePage.class);
 		editProfilePage.uploadImage();
@@ -63,31 +63,31 @@ public class EditProfileTests extends BaseClass {
 	        }
 	        //proveriti jos 
 	}
-	@Test
+	@Test(groups = {"func"})
 	public void tc07editFirstName() {
 		EditProfilePage editProfilePage = PageFactory.initElements(driver, EditProfilePage.class);
 		editProfilePage.editProfileInfo("Pera", "", "", "");
 		Assert.assertEquals(editProfilePage.inputFirstName.getAttribute("value"), "Pera");
 	}
-	@Test
+	@Test(groups = {"func"})
 	public void tc08editFirstNameBlank() {
 		EditProfilePage editProfilePage = PageFactory.initElements(driver, EditProfilePage.class);
 		editProfilePage.editProfileInfo("", "", "", "");
 		Assert.assertEquals(editProfilePage.errorFirstName.getText(), "First name can't be blank");
 	}
-	@Test
+	@Test(groups = {"func"})
 	public void tc09editLastName() {
 		EditProfilePage editProfilePage = PageFactory.initElements(driver, EditProfilePage.class);
 		editProfilePage.editProfileInfo("Petar", "Peric", "", "");
 		Assert.assertEquals(editProfilePage.inputLastName.getAttribute("value"), "Peric");
 	}
-	@Test
+	@Test(groups = {"func"})
 	public void tc10editLocation() {
 		EditProfilePage editProfilePage = PageFactory.initElements(driver, EditProfilePage.class);
 		editProfilePage.editProfileInfo("Zoran", "", "Google Maps", "");
 		Assert.assertEquals(editProfilePage.inputLocation.getAttribute("value"), "Google Maps");
 	}
-	@Test
+	@Test(groups = {"func"})
 	public void tc11editBio() {
 		EditProfilePage editProfilePage = PageFactory.initElements(driver, EditProfilePage.class);
 		editProfilePage.editProfileInfo("Zoran", "Todorcevic", "Novi Sad", "QA");

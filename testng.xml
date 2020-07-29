@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none" thread-count="2" >
+
+	<listeners>
+		<listener class-name="listeners.TestNGListeners"></listener>
+	</listeners>
+
+	<test name="TestsOnChrome">
+	
+	<parameter name="browserName" value="Chrome"></parameter>
+
+		<groups>
+			<run>
+				<include name="smoke" ></include>
+			</run>
+		</groups>
+
+		<classes>
+			<class name="test.LoginTests" />
+			<class name="test.HomePageTests" />
+			<class name="test.MyProfileTests" />
+			<class name="test.OtherProfileTests" />
+			<class name="test.EditProfileTests" />
+			<class name="test.SinglePhotoTests" />
+			<class name="test.CreateNewCollectionTests" />
+		</classes>
+
+	</test>
+	
+	<test name="TestsOnFirefox">
+	
+	<parameter name="browserName" value="Firefox"></parameter>
+
+		<groups>
+			<run>
+				<include name="smoke" ></include>
+			</run>
+		</groups>
+
+		<classes>
+			<class name="test.LoginTests" />
+			<class name="test.HomePageTests" />
+			<class name="test.MyProfileTests" />
+			<class name="test.OtherProfileTests" />
+			<class name="test.EditProfileTests" />
+			<class name="test.SinglePhotoTests" />
+			<class name="test.CreateNewCollectionTests" />
+		</classes>
+
+	</test>
+	
+</suite>

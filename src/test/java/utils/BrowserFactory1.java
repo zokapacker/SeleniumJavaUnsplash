@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class BrowserFactory1 {
@@ -17,12 +19,15 @@ public class BrowserFactory1 {
 	
 	
 	public static WebDriver startApp(WebDriver driver, String browserName, String appUrl)
-	{    
+	{   System.out.println("Browser name is: "+browserName);
+	    System.out.println("Thread id: "+Thread.currentThread().getId()); 
+		
+		folder = new File(UUID.randomUUID().toString());
+        folder.mkdir();
          
 		if(browserName.equals("Chrome"))
 		{   
-			folder = new File(UUID.randomUUID().toString());
-	        folder.mkdir();
+			
 			String projectPath = System.getProperty("user.dir");
 			System.setProperty("webdriver.chrome.driver", projectPath+"\\drivers\\chromedriver\\chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
@@ -36,23 +41,22 @@ public class BrowserFactory1 {
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
 			cap.setCapability(ChromeOptions.CAPABILITY, options);
 			driver = new ChromeDriver(options);
-
 	
 		}
 		else if(browserName.equals("Firefox"))
 		{
-			//firefox
-			//FirefoxProfile profile = new FirefoxProfile();
-			//profile.setPreference("browser.download.dir", folder.getAbsolutePath());
-			//profile.setPreference("browser.download.folderList", 2);
-			//profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "image/jpeg, application/pdf, application/octet-stream");
-			//profile.setPreference("pdfjs.disabled", true);
-			//driver = new FirefoxDriver(profile);
 			String projectPath = System.getProperty("user.dir");
-			System.out.println("projectPath : "+projectPath);
-			
 			System.setProperty("webdriver.gecko.driver", projectPath+"\\drivers\\geckodriver\\geckodriver.exe");
-			driver = new FirefoxDriver();
+			FirefoxProfile profile = new FirefoxProfile();
+			profile.setPreference("browser.download.dir", folder.getAbsolutePath());
+			profile.setPreference("browser.download.folderList", 2);
+			profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "image/jpeg, application/pdf, application/octet-stream");
+			profile.setPreference("pdfjs.disabled", true);
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+	        firefoxOptions.setProfile(profile);
+
+	        driver = new FirefoxDriver(firefoxOptions);
+			//driver = new FirefoxDriver(profile);
 			
 		}
 		else
@@ -75,5 +79,6 @@ public class BrowserFactory1 {
 		}
 		folder.delete();
 	}
+
 
 }

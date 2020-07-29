@@ -1,0 +1,219 @@
+<html>
+<head>
+<title>TestNG:  TestsOnFirefox</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TestsOnFirefox</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 29 10:25:14 CEST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>189 seconds (189687 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>smoke </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.CreateNewCollectionTests.tc01createCollection()'><b>tc01createCollection</b><br>Test class: test.CreateNewCollectionTests</td>
+<td></td>
+<td>23</td>
+<td>test.CreateNewCollectionTests@3eb7fc54</td></tr>
+<tr>
+<td title='test.CreateNewCollectionTests.tc01createCollection()'><b>tc01createCollection</b><br>Test class: test.CreateNewCollectionTests</td>
+<td></td>
+<td>25</td>
+<td>test.CreateNewCollectionTests@2e4b8173</td></tr>
+<tr>
+<td title='test.SinglePhotoTests.tc01downloadPhotoButton()'><b>tc01downloadPhotoButton</b><br>Test class: test.SinglePhotoTests</td>
+<td></td>
+<td>19</td>
+<td>test.SinglePhotoTests@79b06cab</td></tr>
+<tr>
+<td title='test.SinglePhotoTests.tc01downloadPhotoButton()'><b>tc01downloadPhotoButton</b><br>Test class: test.SinglePhotoTests</td>
+<td></td>
+<td>17</td>
+<td>test.SinglePhotoTests@72a7c7e0</td></tr>
+<tr>
+<td title='test.LoginTests.tc01loginApp()'><b>tc01loginApp</b><br>Test class: test.LoginTests</td>
+<td></td>
+<td>13</td>
+<td>test.LoginTests@4386f16</td></tr>
+<tr>
+<td title='test.LoginTests.tc01loginApp()'><b>tc01loginApp</b><br>Test class: test.LoginTests</td>
+<td></td>
+<td>17</td>
+<td>test.LoginTests@703580bf</td></tr>
+<tr>
+<td title='test.SinglePhotoTests.tc02LikeButton()'><b>tc02LikeButton</b><br>Test class: test.SinglePhotoTests</td>
+<td></td>
+<td>0</td>
+<td>test.SinglePhotoTests@79b06cab</td></tr>
+<tr>
+<td title='test.SinglePhotoTests.tc02LikeButton()'><b>tc02LikeButton</b><br>Test class: test.SinglePhotoTests</td>
+<td></td>
+<td>0</td>
+<td>test.SinglePhotoTests@72a7c7e0</td></tr>
+<tr>
+<td title='test.HomePageTests.tc02logoutJoinFreeLink()'><b>tc02logoutJoinFreeLink</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>3</td>
+<td>test.HomePageTests@363ee3a2</td></tr>
+<tr>
+<td title='test.HomePageTests.tc02logoutJoinFreeLink()'><b>tc02logoutJoinFreeLink</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>3</td>
+<td>test.HomePageTests@3e92efc3</td></tr>
+<tr>
+<td title='test.SinglePhotoTests.tc03addToCollectionButton()'><b>tc03addToCollectionButton</b><br>Test class: test.SinglePhotoTests</td>
+<td></td>
+<td>3</td>
+<td>test.SinglePhotoTests@79b06cab</td></tr>
+<tr>
+<td title='test.SinglePhotoTests.tc03addToCollectionButton()'><b>tc03addToCollectionButton</b><br>Test class: test.SinglePhotoTests</td>
+<td></td>
+<td>3</td>
+<td>test.SinglePhotoTests@72a7c7e0</td></tr>
+<tr>
+<td title='test.OtherProfileTests.tc05followLinkLogout()'><b>tc05followLinkLogout</b><br>Test class: test.OtherProfileTests</td>
+<td></td>
+<td>2</td>
+<td>test.OtherProfileTests@4690b489</td></tr>
+<tr>
+<td title='test.OtherProfileTests.tc05followLinkLogout()'><b>tc05followLinkLogout</b><br>Test class: test.OtherProfileTests</td>
+<td></td>
+<td>2</td>
+<td>test.OtherProfileTests@1622f1b</td></tr>
+<tr>
+<td title='test.HomePageTests.tc06logoutSubmitAphotoButton()'><b>tc06logoutSubmitAphotoButton</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>3</td>
+<td>test.HomePageTests@363ee3a2</td></tr>
+<tr>
+<td title='test.HomePageTests.tc06logoutSubmitAphotoButton()'><b>tc06logoutSubmitAphotoButton</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>3</td>
+<td>test.HomePageTests@3e92efc3</td></tr>
+<tr>
+<td title='test.OtherProfileTests.tc06messageLogout()'><b>tc06messageLogout</b><br>Test class: test.OtherProfileTests</td>
+<td></td>
+<td>0</td>
+<td>test.OtherProfileTests@4690b489</td></tr>
+<tr>
+<td title='test.OtherProfileTests.tc06messageLogout()'><b>tc06messageLogout</b><br>Test class: test.OtherProfileTests</td>
+<td></td>
+<td>0</td>
+<td>test.OtherProfileTests@1622f1b</td></tr>
+<tr>
+<td title='test.OtherProfileTests.tc07followButton()'><b>tc07followButton</b><br>Test class: test.OtherProfileTests</td>
+<td></td>
+<td>14</td>
+<td>test.OtherProfileTests@4690b489</td></tr>
+<tr>
+<td title='test.OtherProfileTests.tc07followButton()'><b>tc07followButton</b><br>Test class: test.OtherProfileTests</td>
+<td></td>
+<td>21</td>
+<td>test.OtherProfileTests@1622f1b</td></tr>
+<tr>
+<td title='test.OtherProfileTests.tc08messageButton()'><b>tc08messageButton</b><br>Test class: test.OtherProfileTests</td>
+<td></td>
+<td>1</td>
+<td>test.OtherProfileTests@4690b489</td></tr>
+<tr>
+<td title='test.OtherProfileTests.tc08messageButton()'><b>tc08messageButton</b><br>Test class: test.OtherProfileTests</td>
+<td></td>
+<td>0</td>
+<td>test.OtherProfileTests@1622f1b</td></tr>
+<tr>
+<td title='test.HomePageTests.tc08upFilter()'><b>tc08upFilter</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>2</td>
+<td>test.HomePageTests@363ee3a2</td></tr>
+<tr>
+<td title='test.HomePageTests.tc08upFilter()'><b>tc08upFilter</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>2</td>
+<td>test.HomePageTests@3e92efc3</td></tr>
+<tr>
+<td title='test.HomePageTests.tc10downFilter()'><b>tc10downFilter</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>4</td>
+<td>test.HomePageTests@363ee3a2</td></tr>
+<tr>
+<td title='test.HomePageTests.tc10downFilter()'><b>tc10downFilter</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>4</td>
+<td>test.HomePageTests@3e92efc3</td></tr>
+<tr>
+<td title='test.HomePageTests.tc15logoutLicenseLink()'><b>tc15logoutLicenseLink</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>3</td>
+<td>test.HomePageTests@363ee3a2</td></tr>
+<tr>
+<td title='test.HomePageTests.tc15logoutLicenseLink()'><b>tc15logoutLicenseLink</b><br>Test class: test.HomePageTests</td>
+<td></td>
+<td>3</td>
+<td>test.HomePageTests@3e92efc3</td></tr>
+</table><p>
+</body>
+</html>
